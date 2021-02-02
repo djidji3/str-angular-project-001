@@ -6,7 +6,7 @@ import { Product } from '../model/product';
 })
 export class ProductService {
 
-  list: Product[] = 
+  list: Product[] =
   [
 {"id":1000,"catId":1, "name":"ASpondley","description":"A termek leiras","image":"img1","price":8122,"salePrice": 7234,"stock":"s-457","featured":true,"active":true},
 {"id":1001,"catId":1, "name":"BSpondley","description":"B termek leiras","image":"img1","price":8222,"salePrice": 7134,"stock":"s-457","featured":true,"active":true},
@@ -17,7 +17,8 @@ export class ProductService {
 {"id":1006,"catId":2, "name":"HSpondley","description":"Z termek leiras","image":"img1","price":8722,"salePrice": 7634,"stock":"s-657","featured":false,"active":true},
 {"id":1007,"catId":2, "name":"GSpondley","description":"W termek leiras","image":"img1","price":8822,"salePrice": 7734,"stock":"s-557","featured":false,"active":true},
 {"id":1008,"catId":2, "name":"FSpondley","description":"Q termek leiras","image":"img1","price":0,"salePrice": 7834,"stock":"s-457","featured":true,"active":true},
-]
+];
+
 
   constructor() { }
 
@@ -36,7 +37,7 @@ export class ProductService {
   getCat1Products(randomized?: boolean): Product[]{
     return this.list.filter( item => item.catId == 1 );
   }
-  
+
   /* metodus ami visszaadja az 1.kategoria (catId ==1) termekeket */
   getCat2Products(randomized?: boolean): Product[]{
     return this.list.filter( item => item.catId == 2 );

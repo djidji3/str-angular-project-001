@@ -8,7 +8,7 @@ import { Product } from '../../model/product';
 })
 export class ProductPagerComponent implements OnInit {
 
-  /* bemenet-amivel etetem a gyereket */
+  /* bemenet-amivel etetem a gyerek componens */
   @Input() products: Product[] = [];
 
 
