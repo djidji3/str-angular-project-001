@@ -69,6 +69,18 @@ export class ProductService {
     return randomized ? this.randomize(kiemelt) :  kiemelt;
   }
 
+ /* metodus ami visszaadja a kiemelt termekeket, a cat1 kategriaban,opcionalisan ossze is keveri*/
+  getCat1Featured(randomized?: boolean): Product[]{
+    const kiemelt = this.list.filter( item => item.featured && item.catId===100);
+    return randomized ? this.randomize(kiemelt) :  kiemelt;
+  }
+
+ /* metodus ami visszaadja a kiemelt termekeket, a cat2 kategriaban,opcionalisan ossze is keveri*/
+  getCat2Featured(randomized?: boolean): Product[]{
+    const kiemelt = this.list.filter( item => item.featured && item.catId===200);
+    return randomized ? this.randomize(kiemelt) :  kiemelt;
+  }
+
   /* metodus ami visszaadja az akcios (salePrise !=0) termekeket */
   getSaleProducts(randomized?: boolean): Product[]{
     return this.list.filter( item => item.salePrice != 0 );

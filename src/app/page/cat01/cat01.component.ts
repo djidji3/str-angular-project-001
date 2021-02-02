@@ -10,8 +10,12 @@ import { ProductService } from 'src/app/service/product.service';
   styleUrls: ['./cat01.component.scss']
 })
 export class Cat01Component implements OnInit {
-catProducts : Product[] = this.productService.getCat1Products(true)
+
+  cat1Featured : Product[] = this.productService.getCat1Featured(true)
   .slice(0, 4);
+
+  catProducts : Product[] = this.productService.getCat1Products(true);
+
 
 /* DI hogy elerjem a product.service-t */
 constructor(private productService: ProductService){}
