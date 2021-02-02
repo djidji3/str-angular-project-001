@@ -1,15 +1,24 @@
-<p>
-    child component tartalma:</p>
+<!-- {{cat2Product | json}} -->
+
+<h3>Kiemelt Termékeink</h3>
 <h3>
-    <app-product-pager [products]="featuredProduct"></app-product-pager>
+
+    <app-product-list [products]="featuredProduct"></app-product-list>
 </h3>
 
 <h3>
-    <p>kiemelt termekek veletlen sorrendbn</p>
-</h3>
-{{featuredProduct | json}}
+    Minden termékünk
 
+</h3>
 <h3>
+
+    <app-product-list [products]="allProducts"></app-product-list>
+</h3>
+
+
+<!-- {{allProducts | json}}
+ -->
+<!-- <h3>
     <p>akcios termekek veletlen sorrendbn</p>
 </h3>
 {{saleProduct | json}}
@@ -21,5 +30,4 @@
 
 <h3>
     <p>cat2 termekek veletlen sorrendbn</p>
-</h3>
-{{cat2Product | json}}
+</h3> -->
